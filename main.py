@@ -1,4 +1,10 @@
+import pandas as pd
+
+
 def calculate_grade():
+    # Create a new DataFrame to store grades
+    grades_df = pd.DataFrame(columns=['Name', 'ID', 'Average Grade'])
+
     while True:
         # Get student information
         student_name = input("Enter student name (or type 'exit' to end): ")
@@ -43,6 +49,13 @@ def calculate_grade():
         print("\nGrading Results:")
         print(f"Average Grade: {average_grade:.2f}")
         print("\n-----------------------------")
+
+        # Append data to the DataFrame
+        new_entry = {'Name': student_name, 'ID': student_id, 'Average Grade': average_grade}
+        grades_df = grades_df._append(new_entry, ignore_index=True)
+
+    # Save data to Excel
+    grades_df.to_excel('grades.xlsx', index=False)
 
 
 # Call the function to calculate grades for multiple students
