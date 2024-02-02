@@ -54,6 +54,7 @@ Implement encryption for sensitive data, and follow best practices to ensure the
 ## Authors
 
 - [@tasdikyousuf](https://www.github.com/tasdikyousuf)
+
 [@syedahumyrasiddika](https://www.github.com/syedahumyrasiddika)
 
 
